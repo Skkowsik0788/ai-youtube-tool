@@ -128,7 +128,34 @@ In this video you'll learn useful tips, hidden tricks and important information 
 `;
 
 }
+function generateHashtags(){
 
+let topic=getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+let tag = topic.replace(/ /g,"");
+
+document.getElementById("output").innerHTML=`
+<h2>🏷️ Suggested Hashtags</h2>
+
+#${tag}<br><br>
+
+#${tag}Tips<br><br>
+
+#${tag}2026<br><br>
+
+#Viral<br><br>
+
+#Trending<br><br>
+
+#YouTubeShorts
+`;
+
+  }
 </script>
 
 </body>
