@@ -1,4 +1,4 @@
-h<!DOCTYPE html>
+)<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,13 +10,13 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#0f172a;
-color:#fff;
-text-align:center;
+color:white;
 padding:20px;
+text-align:center;
 }
 
 .container{
-max-width:600px;
+max-width:700px;
 margin:auto;
 }
 
@@ -30,8 +30,8 @@ margin-top:20px;
 }
 
 button{
-margin-top:15px;
-padding:15px 25px;
+padding:14px 24px;
+margin:10px;
 border:none;
 border-radius:10px;
 background:#2563eb;
@@ -40,66 +40,91 @@ font-size:16px;
 cursor:pointer;
 }
 
-button:hover{
-background:#1d4ed8;
-}
-
 .result{
-margin-top:25px;
 background:#1e293b;
 padding:20px;
+margin-top:20px;
 border-radius:12px;
 text-align:left;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
 
 <h1>🚀 Creator AI Hub</h1>
 
-<p>Create Better YouTube Titles</p>
+<p>Create YouTube Content Faster</p>
 
 <input id="topic" placeholder="Enter your topic">
 
 <br>
 
-<button onclick="generate()">Generate Titles</button>
+<button onclick="generateTitles()">🎬 Generate Titles</button>
+
+<button onclick="generateDescription()">📝 Description</button>
 
 <div class="result" id="output">
-
-Your titles will appear here...
-
+Results will appear here...
 </div>
 
 </div>
 
 <script>
 
-function generate(){
+function getTopic(){
+return document.getElementById("topic").value;
+}
 
-let topic=document.getElementById("topic").value;
+function generateTitles(){
+
+let topic=getTopic();
 
 if(topic==""){
 alert("Enter a topic");
 return;
 }
 
-document.getElementById("output").innerHTML=
-`
-<h3>Suggested Titles</h3>
+document.getElementById("output").innerHTML=`
+<h2>🎬 Suggested Titles</h2>
 
-1. ${topic} - Top 10 Secrets<br><br>
+1. Top 10 ${topic} Secrets<br><br>
 
-2. Amazing ${topic} Tips You Must Know<br><br>
+2. ${topic} Explained in 5 Minutes<br><br>
 
-3. ${topic} Explained in 5 Minutes<br><br>
+3. Amazing ${topic} Tips<br><br>
 
-4. Don't Watch ${topic} Before Seeing This<br><br>
+4. Ultimate ${topic} Guide 2026<br><br>
 
-5. Ultimate ${topic} Guide 2026
+5. Don't Watch ${topic} Before This
+`;
+
+}
+
+function generateDescription(){
+
+let topic=getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📝 YouTube Description</h2>
+
+Welcome to our latest video about <b>${topic}</b>.
+
+In this video you'll learn useful tips, hidden tricks and important information about ${topic}.
+
+👍 Like
+🔔 Subscribe
+💬 Comment your opinion.
+
+#${topic.replace(/ /g,"")}
 `;
 
 }
