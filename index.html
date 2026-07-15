@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,21 +7,31 @@
 
 <style>
 body{
+margin:0;
+font-family:Arial,sans-serif;
 background:#0f172a;
-color:white;
-font-family:Arial;
+color:#fff;
 text-align:center;
-padding:30px;
-}
-.card{
-background:#1e293b;
 padding:20px;
-margin:20px auto;
-border-radius:15px;
-max-width:350px;
 }
+
+.container{
+max-width:600px;
+margin:auto;
+}
+
+input{
+width:90%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+margin-top:20px;
+}
+
 button{
-padding:12px 20px;
+margin-top:15px;
+padding:15px 25px;
 border:none;
 border-radius:10px;
 background:#2563eb;
@@ -29,32 +39,72 @@ color:white;
 font-size:16px;
 cursor:pointer;
 }
+
 button:hover{
 background:#1d4ed8;
+}
+
+.result{
+margin-top:25px;
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+text-align:left;
 }
 </style>
 
 </head>
 <body>
 
+<div class="container">
+
 <h1>🚀 Creator AI Hub</h1>
 
-<p>Create YouTube Content Faster with AI</p>
+<p>Create Better YouTube Titles</p>
 
-<div class="card">
-<h2>🎬 AI Title Generator</h2>
-<button onclick="alert('Coming Soon')">Open</button>
+<input id="topic" placeholder="Enter your topic">
+
+<br>
+
+<button onclick="generate()">Generate Titles</button>
+
+<div class="result" id="output">
+
+Your titles will appear here...
+
 </div>
 
-<div class="card">
-<h2>📝 AI Description Generator</h2>
-<button onclick="alert('Coming Soon')">Open</button>
 </div>
 
-<div class="card">
-<h2>🏷️ AI Hashtag Generator</h2>
-<button onclick="alert('Coming Soon')">Open</button>
-</div>
+<script>
+
+function generate(){
+
+let topic=document.getElementById("topic").value;
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=
+`
+<h3>Suggested Titles</h3>
+
+1. ${topic} - Top 10 Secrets<br><br>
+
+2. Amazing ${topic} Tips You Must Know<br><br>
+
+3. ${topic} Explained in 5 Minutes<br><br>
+
+4. Don't Watch ${topic} Before Seeing This<br><br>
+
+5. Ultimate ${topic} Guide 2026
+`;
+
+}
+
+</script>
 
 </body>
 </html>
