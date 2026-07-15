@@ -129,7 +129,15 @@ In this video you'll learn useful tips, hidden tricks and important information 
 
 }
 function generateHashtags(){
+function copyResult(){
 
+let text = document.getElementById("output").innerText;
+
+navigator.clipboard.writeText(text);
+
+alert("✅ Result Copied!");
+
+  }
 let topic=getTopic();
 
 if(topic==""){
