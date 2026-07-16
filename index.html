@@ -166,7 +166,40 @@ document.getElementById("output").innerHTML=`
 }         
 function generateScript(){   
 }  
+function generateIdeas(){
 
+let topic=getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>💡 Video Ideas</h2>
+
+1. Top 10 ${topic} Facts
+
+2. Beginner's Guide to ${topic}
+
+3. Common Mistakes in ${topic}
+
+4. Hidden Secrets of ${topic}
+
+5. ${topic} Tips & Tricks
+
+6. Everything About ${topic}
+
+7. ${topic} Explained Simply
+
+8. Latest ${topic} Updates
+
+9. ${topic} for Beginners
+
+10. Ultimate ${topic} Guide
+`;
+}
+      
 let topic=getTopic();
 if(topic==""){
 alert("Enter a topic");
