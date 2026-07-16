@@ -164,7 +164,42 @@ document.getElementById("output").innerHTML=`
 
 #YouTubeShorts
 `;
+function generateScript(){
 
+let topic=getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🎥 YouTube Script</h2>
+
+🎬 Intro
+
+Hello everyone!
+Welcome back to our channel.
+
+Today we're talking about <b>${topic}</b>.
+
+📚 Main Content
+
+• What is ${topic}
+
+• Why ${topic} is important
+
+• Tips and tricks
+
+🎯 Outro
+
+If you enjoyed this video,
+👍 Like
+🔔 Subscribe
+💬 Comment
+
+Thanks for watching!
+`;
   }
 </script>
 
