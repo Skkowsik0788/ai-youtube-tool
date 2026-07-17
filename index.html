@@ -254,19 +254,36 @@ return;
 }
 
 document.getElementById("output").innerHTML=`
-<h2>📧 Professional Email</h2>
+<div style="background:#1e293b;padding:20px;border-radius:12px;line-height:1.8;color:white;">
 
-Subject: ${topic}<br><br>
+<h2 style="color:#60a5fa;">📧 Professional Email</h2>
 
-Hello,<br><br>
+<p><b>📌 Subject:</b> <span style="color:#facc15;">${topic}</span></p>
 
-I hope you are doing well.<br><br>
+<hr style="border:1px solid #334155;">
 
-I am writing regarding ${topic}.<br><br>
+<p>Hello,</p>
 
-Please let me know your thoughts.<br><br>
+<p>I hope you are doing well.</p>
 
-Best Regards
+<p>
+I am writing regarding
+<b style="color:#22c55e;">${topic}</b>.
+</p>
+
+<p>
+Please let me know your thoughts.
+I look forward to hearing from you.
+</p>
+
+<br>
+
+<p>
+Kind Regards,<br>
+<b>Your Name</b>
+</p>
+
+</div>
 `;
 }
 </script>
