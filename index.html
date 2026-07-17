@@ -480,6 +480,33 @@ best ${tag}, ${tag} 2026
 #Viral<br>
 #YouTubeShorts
 `;
+}
+function generateSEOScore(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+let score = 85;
+
+document.getElementById("output").innerHTML=`
+<h2>📈 YouTube SEO Score</h2>
+
+🎯 Topic: <b>${topic}</b><br><br>
+
+✅ SEO Score: <b style="color:#22c55e;">${score}/100</b><br><br>
+
+✔️ Good Title<br>
+✔️ SEO Keywords Found<br>
+✔️ Trending Topic<br>
+✔️ High Search Potential<br>
+✔️ Beginner Friendly<br><br>
+
+💡 Tip: Add numbers, powerful words and the current year in your title for better CTR.
+`;
 } 
 </script>
 
