@@ -539,7 +539,30 @@ document.getElementById("output").innerHTML = `
 <p><b>💡 Tip:</b> Upload consistently at the same time every week.</p>
 `;
  
-} 
+}
+function generateHook(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🎯 Viral Video Hook</h2>
+
+🔥 Stop scrolling!
+
+Did you know this amazing fact about <b>${topic}</b>?
+
+😲 Most people don't know this...
+
+Watch until the end because the last tip might surprise you!
+
+👇 Let's get started!
+`;
+ } 
 </script>
 
 </body>
