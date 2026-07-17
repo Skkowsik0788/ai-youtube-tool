@@ -242,7 +242,32 @@ document.getElementById("output").innerHTML=`
 10. Ultimate ${topic} Guide
 `;
 
-  }    
+  }  
+  function generateEmail(){
+
+let topic=getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📧 Professional Email</h2>
+
+Subject: ${topic}
+
+Hello,
+
+I hope you are doing well.
+
+I am writing regarding ${topic}.
+
+Please let me know your thoughts.
+
+Best Regards
+`;
+}
 </script>
 
 </body>
