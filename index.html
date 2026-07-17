@@ -375,7 +375,32 @@ ${tag} for beginners,
 viral ${tag}, trending ${tag},
 youtube, shorts, tutorial, ai tools
 `;
-  }  
+  }
+function generateCaption(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📢 Social Media Caption</h2>
+
+🔥 ${topic} is changing everything!
+
+If you're interested in ${topic}, don't miss this.
+
+💬 What do you think?
+❤️ Like • 💬 Comment • 🔄 Share
+
+#${topic.replace(/ /g,"")}
+#Trending
+#Viral
+#YouTube
+`;
+}  
 </script>
 
 </body>
