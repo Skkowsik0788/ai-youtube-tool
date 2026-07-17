@@ -324,6 +324,33 @@ document.getElementById("output").innerHTML = `
 `;
 
 
+  }
+function generateThumbnailPrompt(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🖼️ AI Thumbnail Prompt</h2>
+
+Create a highly clickable YouTube thumbnail about <b>${topic}</b>.
+
+Style:
+• Ultra Realistic
+• Cinematic Lighting
+• Vibrant Colors
+• High Contrast
+• 8K Quality
+• Emotional Face
+• DSLR Look
+• Eye-catching Composition
+• Viral YouTube Thumbnail
+• No Text
+`;
   }  
 </script>
 
