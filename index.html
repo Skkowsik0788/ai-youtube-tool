@@ -352,6 +352,28 @@ Style:
 • Viral YouTube Thumbnail
 • No Text
 `;
+  }
+function generateTags(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+let tag = topic.replace(/ /g,"");
+
+document.getElementById("output").innerHTML=`
+<h2>🏷️ YouTube Tags</h2>
+
+${tag}, ${tag} tips, ${tag} tutorial,
+${tag} guide, ${tag} 2026,
+best ${tag}, learn ${tag},
+${tag} for beginners,
+viral ${tag}, trending ${tag},
+youtube, shorts, tutorial, ai tools
+`;
   }  
 </script>
 
