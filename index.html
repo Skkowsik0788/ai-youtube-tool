@@ -435,7 +435,51 @@ document.getElementById("output").innerHTML=`
 
 10. ${topic} Official
 `;
- } 
+ }
+function generateYouTubePack(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+let tag = topic.replace(/ /g,"");
+
+document.getElementById("output").innerHTML=`
+<h2>🚀 Complete YouTube Pack</h2>
+
+<h3>🎬 Title</h3>
+Top 10 ${topic} Secrets You Must Know!
+
+<hr>
+
+<h3>📝 Description</h3>
+
+Learn everything about <b>${topic}</b> in this video.
+
+👍 Like
+🔔 Subscribe
+💬 Comment
+
+<hr>
+
+<h3>🏷️ Tags</h3>
+
+${tag}, ${tag} tutorial, ${tag} guide,
+best ${tag}, ${tag} 2026
+
+<hr>
+
+<h3>#️⃣ Hashtags</h3>
+
+#${tag}<br>
+#Trending<br>
+#Viral<br>
+#YouTubeShorts
+`;
+} 
 </script>
 
 </body>
