@@ -508,6 +508,36 @@ document.getElementById("output").innerHTML=`
 
 💡 Tip: Add numbers, powerful words and the current year in your title for better CTR.
 `;
+}
+function generateUploadTime(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>⏰ Best Upload Time</h2>
+
+📺 Topic: <b>${topic}</b><br><br>
+
+🇧🇩 Bangladesh
+• 7:00 PM - 10:00 PM
+
+🇺🇸 USA
+• 3:00 PM - 6:00 PM (EST)
+
+🇮🇳 India
+• 6:00 PM - 9:00 PM
+
+🌍 Global Audience
+• 5:00 PM - 8:00 PM (Local Time)
+
+💡 Tip:
+Upload consistently at the same time every week for better audience engagement.
+`;
 } 
 </script>
 
