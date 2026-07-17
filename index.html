@@ -401,7 +401,40 @@ If you're interested in ${topic}, don't miss this.
 #Viral
 #YouTube
 `;
-}  
+}
+function generateChannelName(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📺 YouTube Channel Name Ideas</h2>
+
+1. ${topic} Hub<br><br>
+
+2. ${topic} Studio<br><br>
+
+3. The ${topic} Zone<br><br>
+
+4. ${topic} World<br><br>
+
+5. ${topic} Nation<br><br>
+
+6. ${topic} Central<br><br>
+
+7. Epic ${topic}<br><br>
+
+8. ${topic} Master<br><br>
+
+9. NextGen ${topic}<br><br>
+
+10. ${topic} Official
+`;
+ } 
 </script>
 
 </body>
