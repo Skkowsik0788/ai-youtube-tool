@@ -743,6 +743,31 @@ Keep learning and never stop improving.
 Start today and continue improving your knowledge about ${topic}.
 `;
  }
+function openAIChat(){
+
+let question = prompt("Ask your AI Question");
+
+if(question==null || question==""){
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🤖 AI Chat Assistant</h2>
+
+<b>👤 You:</b><br>
+${question}
+
+<br><br>
+
+<b>🤖 AI:</b><br>
+
+This is the demo version of Creator AI Hub AI Chat.
+
+In the next update this will connect with an AI API
+(OpenAI or Google Gemini) and generate real answers automatically.
+
+`;
+ } 
 </script>
 
 </body>
