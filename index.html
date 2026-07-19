@@ -675,7 +675,39 @@ Requirements:
 Negative Prompt:
 Blur, Low Quality, Watermark, Text, Logo, Noise, Distorted Face
 `;
-} 
+}
+function generateResume(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter your profession");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📄 Professional Resume</h2>
+
+<b>Name:</b> Your Name<br><br>
+
+<b>Profession:</b> ${topic}<br><br>
+
+<b>Skills:</b><br>
+• Communication<br>
+• Problem Solving<br>
+• Team Work<br>
+• Time Management<br><br>
+
+<b>Experience:</b><br>
+2+ Years Experience in ${topic}.<br><br>
+
+<b>Education:</b><br>
+Bachelor's Degree<br><br>
+
+<b>Objective:</b><br>
+Seeking a challenging position to utilize my skills and contribute to organizational growth.
+`;
+ } 
 </script>
 
 </body>
