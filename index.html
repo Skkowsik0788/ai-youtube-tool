@@ -184,8 +184,12 @@ return document.getElementById("topic").value;
 } 
 function showCategory(name){
 
-alert(name.toUpperCase()+" Category");
+document.getElementById("tools").style.display="block";
 
+document.getElementById("output").innerHTML=
+"<h2>📂 "+name.toUpperCase()+" Category</h2><br>Select a tool below.";
+
+ 
  
 }
   
