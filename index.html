@@ -802,7 +802,56 @@ document.getElementById("output").innerHTML=`
 
 🔟 ${topic} Explained in 30 Seconds
 `;
-} 
+}
+function generateCalendar(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📅 30-Day Content Calendar</h2>
+
+Week 1
+• Day 1 - Introduction to ${topic}
+• Day 2 - Tips & Tricks
+• Day 3 - Common Mistakes
+• Day 4 - FAQ
+• Day 5 - Beginner Guide
+• Day 6 - Case Study
+• Day 7 - Weekly Summary
+
+Week 2
+• Product Review
+• Success Story
+• Best Tools
+• Hidden Secrets
+• Expert Advice
+• Checklist
+• Weekly Recap
+
+Week 3
+• Latest Trends
+• Myths vs Facts
+• Do's & Don'ts
+• Comparison
+• Advanced Tips
+• Real Examples
+• Weekly Recap
+
+Week 4
+• Future Trends
+• Top Resources
+• Community Questions
+• Challenge
+• Final Guide
+• Best Practices
+• Monthly Wrap-Up
+`;
+ } 
 </script>
 
 </body>
