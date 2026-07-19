@@ -954,6 +954,44 @@ Status:
 
 Thank you for your business!
 `;
+ }
+function generateTranslator(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter text");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🌍 AI Translator</h2>
+
+<b>Original Text:</b><br>
+${topic}
+
+<br><br>
+
+<b>English:</b><br>
+[AI Translation]
+
+<br><br>
+
+<b>বাংলা:</b><br>
+[AI Translation]
+
+<br><br>
+
+<b>Spanish:</b><br>
+[AI Translation]
+
+<br><br>
+
+<b>Hindi:</b><br>
+[AI Translation]
+
+<p><i>⚠️ Demo Version - Real AI Translation will be available after connecting an AI API.</i></p>
+`;
  } 
 </script>
 
