@@ -708,7 +708,40 @@ Bachelor's Degree<br><br>
 <b>Objective:</b><br>
 Seeking a challenging position to utilize my skills and contribute to organizational growth.
 `;
- } 
+ }
+ function generateBlog(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📝 AI Blog Writer</h2>
+
+<h3>${topic}</h3>
+
+<p>
+${topic} is becoming more popular every day.
+Many people want to learn about it because it helps improve skills and productivity.
+</p>
+
+<p>
+Getting started with ${topic} is simple.
+Practice regularly, use the right tools, and keep learning from reliable sources.
+</p>
+
+<p>
+With dedication and consistency, anyone can become successful in ${topic}.
+Keep learning and never stop improving.
+</p>
+
+<b>Conclusion:</b><br>
+Start today and continue improving your knowledge about ${topic}.
+`;
+ }
 </script>
 
 </body>
