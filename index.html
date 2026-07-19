@@ -768,7 +768,40 @@ In the next update this will connect with an AI API
 (OpenAI or Google Gemini) and generate real answers automatically.
 
 `;
- } 
+ }
+function generateShortsIdeas(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🎬 Viral Shorts Ideas</h2>
+
+1️⃣ ${topic} in 15 Seconds
+
+2️⃣ 5 Facts About ${topic}
+
+3️⃣ ${topic} Before vs After
+
+4️⃣ Amazing ${topic} Hack
+
+5️⃣ Biggest ${topic} Mistake
+
+6️⃣ ${topic} You Didn't Know
+
+7️⃣ Top 3 ${topic} Tips
+
+8️⃣ ${topic} Challenge
+
+9️⃣ Hidden Secret of ${topic}
+
+🔟 ${topic} Explained in 30 Seconds
+`;
+} 
 </script>
 
 </body>
