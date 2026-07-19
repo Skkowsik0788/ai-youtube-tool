@@ -643,7 +643,38 @@ Include:
 
 Make it engaging, beginner-friendly and easy to understand.
 `;
- } 
+ }
+function generateImagePrompt(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🖼️ AI Image Prompt</h2>
+
+Create an ultra realistic image about "${topic}".
+
+Requirements:
+
+• 8K Ultra HD
+• Cinematic Lighting
+• Hyper Realistic
+• DSLR Quality
+• Sharp Details
+• Vibrant Colors
+• Professional Composition
+• Natural Shadows
+• Highly Detailed
+• Trending Art Style
+
+Negative Prompt:
+Blur, Low Quality, Watermark, Text, Logo, Noise, Distorted Face
+`;
+} 
 </script>
 
 </body>
