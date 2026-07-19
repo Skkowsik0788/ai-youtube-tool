@@ -615,6 +615,33 @@ Watch until the end because the last tip might surprise you!
 
 👇 Let's get started!
 `;
+ }
+function generatePrompt(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter a topic");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🤖 AI Prompt Generator</h2>
+
+<b>Prompt:</b>
+
+Create a detailed, professional, SEO-friendly content about "${topic}".
+
+Include:
+• Catchy Title
+• Introduction
+• Main Content
+• Tips
+• Conclusion
+• Call To Action
+
+Make it engaging, beginner-friendly and easy to understand.
+`;
  } 
 </script>
 
