@@ -852,7 +852,40 @@ Week 4
 • Best Practices
 • Monthly Wrap-Up
 `;
- } 
+ }
+ function generateBusinessName(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter your business type");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>💼 Business Name Ideas</h2>
+
+1. Prime ${topic}<br><br>
+
+2. NextGen ${topic}<br><br>
+
+3. Smart ${topic}<br><br>
+
+4. Elite ${topic}<br><br>
+
+5. Bright ${topic}<br><br>
+
+6. Vision ${topic}<br><br>
+
+7. Nova ${topic}<br><br>
+
+8. Infinity ${topic}<br><br>
+
+9. Future ${topic}<br><br>
+
+10. Pro ${topic}
+`;
+ }
 </script>
 
 </body>
