@@ -916,7 +916,44 @@ Order now and enjoy the best experience!
 
 ⭐ Customer Satisfaction Guaranteed
 `;
-} 
+}
+function generateInvoice(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter product or service");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>📄 Professional Invoice</h2>
+
+Invoice No: INV-${Math.floor(Math.random()*100000)}
+
+━━━━━━━━━━━━━━━━━━
+
+Product / Service:
+<b>${topic}</b>
+
+Quantity: 1
+
+Price: $100
+
+Tax: $0
+
+━━━━━━━━━━━━━━━━━━
+
+<b>Total: $100</b>
+
+━━━━━━━━━━━━━━━━━━
+
+Status:
+✅ Paid
+
+Thank you for your business!
+`;
+ } 
 </script>
 
 </body>
