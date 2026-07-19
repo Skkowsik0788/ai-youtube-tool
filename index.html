@@ -887,6 +887,35 @@ document.getElementById("output").innerHTML=`
 10. Pro ${topic}
 `;
  }
+function generateProductDescription(){
+
+let topic = getTopic();
+
+if(topic==""){
+alert("Enter product name");
+return;
+}
+
+document.getElementById("output").innerHTML=`
+<h2>🛍️ Product Description</h2>
+
+<b>${topic}</b>
+
+Premium quality ${topic} designed for everyday use.
+
+✅ High Quality
+✅ Durable
+✅ Stylish Design
+✅ Affordable Price
+✅ Easy to Use
+
+Perfect for personal and professional use.
+
+Order now and enjoy the best experience!
+
+⭐ Customer Satisfaction Guaranteed
+`;
+} 
 </script>
 
 </body>
