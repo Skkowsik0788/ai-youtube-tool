@@ -231,7 +231,16 @@ document.getElementById("output").innerHTML =
  
  
 }
-  
+function backToCategories(){
+
+document.getElementById("tools").style.display="none";
+
+document.getElementById("output").innerHTML="Results will appear here...";
+
+window.scrollTo({top:0,behavior:"smooth"});
+
+ }
+ 
 function generateTitles(){
 
 let topic=getTopic();
