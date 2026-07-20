@@ -184,11 +184,50 @@ return document.getElementById("topic").value;
 } 
 function showCategory(name){
 
-document.getElementById("tools").style.display="block";
+let buttons = document.querySelectorAll("#tools button");
 
-document.getElementById("output").innerHTML=
-"<h2>📂 "+name.toUpperCase()+" Category</h2><br>Select a tool below.";
+buttons.forEach(btn=>{
+    btn.style.display="none";
+});
 
+if(name=="writing"){
+    document.querySelector('[onclick="generateIdeas()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateTitles()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateBlog()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateDescription()"]').style.display="inline-block";
+}
+
+if(name=="business"){
+    document.querySelector('[onclick="generateBusinessName()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateInvoice()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateProductDescription()"]').style.display="inline-block";
+}
+
+if(name=="social"){
+    document.querySelector('[onclick="generateCaption()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateHashtags()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateTags()"]').style.display="inline-block";
+}
+
+if(name=="education"){
+    document.querySelector('[onclick="generateResume()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateTranslator()"]').style.display="inline-block";
+}
+
+if(name=="ai"){
+    document.querySelector('[onclick="generatePrompt()"]').style.display="inline-block";
+    document.querySelector('[onclick="generateImagePrompt()"]').style.display="inline-block";
+    document.querySelector('[onclick="openAIChat()"]').style.display="inline-block";
+}
+
+if(name=="tools"){
+    buttons.forEach(btn=>{
+        btn.style.display="inline-block";
+    });
+}
+
+document.getElementById("output").innerHTML =
+"<h2>📂 "+name.toUpperCase()+"</h2><br>Select a tool below.";
  
  
 }
