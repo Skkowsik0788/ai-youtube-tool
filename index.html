@@ -268,7 +268,28 @@ document.getElementById("output").innerHTML="Results will appear here...";
      
  
  }
- 
+function searchTools(){
+
+let input =
+document.getElementById("searchTool").value.toLowerCase();
+
+let buttons =
+document.querySelectorAll("#tools button");
+
+buttons.forEach(btn=>{
+
+let text =
+btn.innerText.toLowerCase();
+
+if(text.includes(input)){
+btn.style.display="inline-block";
+}else{
+btn.style.display="none";
+}
+
+});
+
+ } 
 function generateTitles(){
 
 let topic=getTopic();
