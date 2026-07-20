@@ -207,7 +207,7 @@ let buttons = document.querySelectorAll("#tools button");
 buttons.forEach(btn=>{
     btn.style.display="none";
 });
-
+document.getElementById("tools").style.display="block";
 if(name=="writing"){
     document.querySelector('[onclick="generateIdeas()"]').style.display="inline-block";
     document.querySelector('[onclick="generateTitles()"]').style.display="inline-block";
