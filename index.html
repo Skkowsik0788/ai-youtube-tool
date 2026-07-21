@@ -881,56 +881,31 @@ Keep learning and never stop improving.
 Start today and continue improving your knowledge about ${topic}.
 `;
  }
-async function openAIChat() {
+function openAIChat(){
 
 let question = prompt("Ask your AI Question");
 
-if (!question) return;
-
-document.getElementById("output").innerHTML = "🤖 Thinking...";
-
-try {
-
-const response = await fetch(
-"https://creator-ai-api.skkowsik300.workers.dev/",
-{
-method: "POST",
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify({
-prompt: question
-})
+if(question==null || question==""){
+return;
 }
-);
 
-const data = await response.json();
+document.getElementById("output").innerHTML=`
+<h2>🤖 AI Chat Assistant</h2>
 
-let answer =
-data.candidates?.[0]?.content?.parts?.[0]?.text ||
-"No response.";
-
-document.getElementById("output").innerHTML = `
-<h2>🤖 AI Chat</h2>
-
-<b>👤 You:</b><br><br>
-
+<b>👤 You:</b><br>
 ${question}
 
-<hr>
+<br><br>
 
-<b>🤖 Gemini:</b><br><br>
+<b>🤖 AI:</b><br>
 
-${answer}
+This is the demo version of Creator AI Hub AI Chat.
+
+In the next update this will connect with an AI API
+(OpenAI or Google Gemini) and generate real answers automatically.
+
 `;
 
-} catch (e) {
-
-document.getElementById("output").innerHTML =
-"❌ Error connecting to AI.";
-
- 
-`;
  }
 function generateShortsIdeas(){
 
