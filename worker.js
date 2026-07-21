@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     if (request.method !== "POST") {
-      return new Response("Creator AI Hub API is running.");
+      return new Response("Creator AI Hub API");
     }
 
     const { prompt } = await request.json();
